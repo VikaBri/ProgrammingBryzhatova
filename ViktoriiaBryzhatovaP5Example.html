@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+    <meta charset="utf-8">
+    
+  </head>
+
+  <body>
+
+    <script>
+        var x = 0;
+    	var h = 50;
+    	var w = 60;
+
+           
+           function testFunction(){
+           	console.log('test');
+           }
+          testFunction();
+
+    	function createEllipse(){
+    		//print("I'm in the create ellipse function");
+    		stroke('#5145F5');
+    		ellipse(mouseX,mouseY,h,w);
+    		}
+
+    	function setup(){
+    		createCanvas(windowWidth,windowHeight);
+    		background('#FDD5C7');
+    	}
+
+    	function draw() {
+
+    		createEllipse();
+    		
+
+             if (mouseIsPressed) {
+             	fill ('#3BBFC7');
+             	createEllipse();
+             }
+             else {
+             	fill(255);
+             	createEllipse();
+             }
+
+
+
+             while (x < windowHeight) {
+             	fill('#1096B3');
+             	rect(random(windowWidth),random(windowHeight),h,w)
+             	console.log(x);
+             x++;
+             }
+
+
+    		//stroke(0);
+    		//ellipse(mouseX,mouseY,h,w);
+    	}
+
+    </script>
+
+  </body>
+
+</html>
